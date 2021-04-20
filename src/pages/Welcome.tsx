@@ -14,14 +14,15 @@ import wateringImg from "../assets/watering.png";
 import colors from "../styles/colors";
 
 import fonts from "../styles/fonts";
+import { useNavigation } from "@react-navigation/native";
 
 export function Welcome() {
-  /*    const[visible, setVisible]= useState(false);
+  
+  const navigation = useNavigation();
 
-    function handleVisbility() {
-        setVisible(true)
-        
-    } */
+  function handleStart() {
+    navigation.navigate('UserIdentification')
+  }
 
   return (
     <SafeAreaView style={styles.container}>
@@ -36,7 +37,7 @@ export function Welcome() {
         sempre que precisar.
       </Text>
 
-      <TouchableOpacity style={styles.button} activeOpacity={0.7}>
+      <TouchableOpacity style={styles.button} activeOpacity={0.7}  onPress={handleStart}>
         <Feather name="chevron-right" style={styles.buttonIcon}></Feather>
       </TouchableOpacity>
     </SafeAreaView>
