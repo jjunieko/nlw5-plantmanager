@@ -1,5 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
+import { TouchableOpacityProps } from "react-native";
 import {
   SafeAreaView,
   StyleSheet,
